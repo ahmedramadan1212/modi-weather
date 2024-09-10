@@ -1,0 +1,76 @@
+/* sy.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.weather-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    max-width: 100%;
+    margin: 20px auto;
+    width: 90%;
+    box-sizing: border-box; /* يشمل padding في العرض الإجمالي */
+}
+
+#city-input {
+    padding: 10px;
+    font-size: 16px;
+    width: calc(100% - 22px); /* تأكد من أن الحقل يأخذ العرض الكامل المتاح */
+    box-sizing: border-box; /* يشمل padding في العرض الإجمالي */
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#weather-result {
+    margin-top: 20px;
+    text-align: left; /* محاذاة النص إلى اليسار لجعله أكثر قابلية للقراءة */
+}
+
+/* استخدام Media Queries لجعل التصميم يتكيف مع أحجام الشاشات المختلفة */
+@media (max-width: 768px) {
+    .weather-container {
+        width: 95%;
+    }
+
+    #city-input {
+        width: calc(100% - 22px);
+    }
+
+    button {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px; /* إضافة بعض المسافة بين المدخلات والأزرار */
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        font-size: 14px;
+    }
+
+    #city-input {
+        font-size: 14px;
+    }
+}
